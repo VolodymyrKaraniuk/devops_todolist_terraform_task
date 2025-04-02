@@ -1,10 +1,10 @@
 resource "azurerm_network_interface" "nic" {
-  name                            = "example-nic"
+  name                            = "${var.vm_name}-nic"
   location                        = var.location
   resource_group_name             = var.resource_group_name
 
   ip_configuration {
-    name                          = "example-ip-config"
+    name                          = "${var.vm_name}-ip-config"
     subnet_id                     = var.subnet_id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = var.pip_id
@@ -47,7 +47,7 @@ resource "azurerm_virtual_machine" "vm" {
 }
 
 resource "azurerm_virtual_machine_extension" "vmex" {
-  name                 = "hostname"
+  name                 = "run_python_project"
   virtual_machine_id   = azurerm_virtual_machine.vm.id
   publisher            = "Microsoft.Azure.Extensions"
   type                 = "CustomScript"
