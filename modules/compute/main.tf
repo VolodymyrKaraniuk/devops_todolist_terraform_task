@@ -59,7 +59,7 @@ resource "azurerm_virtual_machine_extension" "vmex" {
 
   settings = <<SETTINGS
  {
-  "fileUris": ["https://raw.githubusercontent.com/VolodymyrKaraniuk/devops_todolist_terraform_task/main/install-app.sh"],
+  "fileUris": ["https://raw.githubusercontent.com/VolodymyrKaraniuk/devops_todolist_terraform_task/develop/install-app.sh"],
   "commandToExecute": "./install-app.sh"
  }
 SETTINGS
