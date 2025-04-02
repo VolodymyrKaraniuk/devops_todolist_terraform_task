@@ -36,4 +36,5 @@ module "compute" {
   vm_size = var.vm_size
   vm_ssh_key = var.vm_ssh_key
   subnet_id = module.network-module.subnet-id
+  pip_id = module.network-module.pip-id
 }

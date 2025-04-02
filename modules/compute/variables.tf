@@ -20,3 +20,6 @@ variable "vm_ssh_key" {
 variable "subnet_id" {
   default = "subnet_id"
 }
+variable "pip_id" {
+  default = "pip_id"
+}
